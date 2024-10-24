@@ -14,7 +14,7 @@
             justify-content: center;
             height: 100vh;
             background-color: #f0f8ff;
-            position: relative;
+            background-image: url('https://mega.nz/file/Et5WGIwK#2vpzS2Yub2KNfdUIm21kpRN9lL7j57VKC626_45fB-s'); /* Replace with your image link */
             background-size: cover; /* Ensure the background covers the entire viewport */
             background-position: center; /* Center the background image */
         }
@@ -52,28 +52,9 @@
                 opacity: 1;
             }
         }
-        .input-container {
-            position: absolute;
-            top: 20px;
-            z-index: 1; /* Ensure it appears above other elements */
-        }
-        .input-container input {
-            padding: 10px;
-            font-size: 16px;
-        }
-        .input-container button {
-            padding: 10px;
-            font-size: 16px;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
-
-    <div class="input-container">
-        <input type="text" id="bgImageInput" placeholder="https://mega.nz/fm/V9wnzahR">
-        <button id="setBgButton">Set Background</button>
-    </div>
 
     <h1>Welcome to Zackary and Natsumi's website</h1>
     <h2>ザックと夏海のウェブサイトへようこそ</h2>
@@ -82,12 +63,6 @@
     <script>
         const colors = ['#FF5733', '#33FF57', '#3357FF', '#F5FF33', '#FF33A1', '#33FFF5'];
         const numBalls = 50;
-
-        // Set background image function
-        document.getElementById('setBgButton').addEventListener('click', () => {
-            const imgUrl = document.getElementById('bgImageInput').value;
-            document.body.style.backgroundImage = `url('${imgUrl}')`;
-        });
 
         function createBall() {
             const ball = document.createElement('div');
